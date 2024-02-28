@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/lib/bootstrap.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>Inventory management project</title>
+  </head>
+  <body>
+    <div id="The-King">
+      <!-- The Header  -->
+      <div class="input">
+        <div class="input-group mb-3">
+          <span class="input-group-text">Title</span>
+          <input type="text" class="form-control" id="title" placeholder="title" required />
+        </div>
+        <!-- The Flex Input  -->
+        <div class="row">
+          <div class="col-sm-12 col-lg input-group mb-3">
+            <span class="input-group-text">Price</span>
+            <input type="number" class="form-control" id="price" placeholder="price" onkeyup="pluseTotal()" required />
+          </div>
+          <div class="col-sm-12 col-lg input-group mb-3">
+            <span class="input-group-text">Taxs</span>
+            <input type="number" class="form-control" id="taxs" placeholder="taxs" onkeyup="pluseTotal()" />
+          </div>
+          <div class="col-sm-12 col-lg input-group mb-3">
+            <span class="input-group-text">Descount</span>
+            <input type="number" class="form-control" id="descount" placeholder="descount" onkeyup="pluseTotal()" />
+          </div>
+          <small id="total" hidden>total:</small>
+        </div>
+        <!-- The End To Flex input  -->
+        <div class="input-group mb-3">
+          <span class="input-group-text"
+            ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
+              <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4" /></svg
+          ></span>
+          <input type="text" class="form-control" id="category" placeholder="category" required />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Caunt</span>
+          <input type="text" class="form-control" id="caunt" placeholder="caunt" />
+        </div>
+        <!-- Search Input  -->
+        <div class="input-group mb-3">
+          <span class="input-group-text"
+            ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" /></svg
+          ></span>
+          <input type="text" class="form-control" id="search" placeholder="search" onkeydown="serched(this.value)" />
+        </div>
+      </div>
+      <!-- Button  -->
+      <div class="button">
+        <button class="btn btn-outline-success col-12 m-1" type="button" id="create">Create</button>
+        <button class="btn btn-outline-danger col-12 m-1" type="button" id="delete">Delete All</button>
+      </div>
+      <!-- Table  -->
+      <div class="container">
+        <table style="width: 100%">
+          <thead class="table-dark container" style="word-break: break-all; word-wrap: break-word">
+            <tr>
+              <th>ID</th>
+              <th>TITLE</th>
+              <!-- <th>PRICE</th> -->
+              <!-- <th>Descount</th> -->
+              <th>TOTAL</th>
+              <th>CATEGORY</th>
+              <!-- <th>CAUNT</th> -->
+              <th>DELETE</th>
+              <th>UPDATE</th>
+            </tr>
+          </thead>
+          <tbody id="tbody" style="word-break: keep-all; padding: 5px"></tbody>
+        </table>
+        <span id="move-up" style="position: absolute; cursor: pointer; left: 1300px; display: none"
+          ><svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" /></svg
+        ></span>
+      </div>
+    </div>
+    <script src="assets/scripts/lib/bootstrap.js"></script>
+    <script src="assets/scripts/index.js"></script>
+  </body>
+</html>

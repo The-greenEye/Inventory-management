@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.144);
+}
+#The-King {
+  padding: 12px;
+  width: 99%;
+  margin: auto;
+  background-color: white;
+  border-radius: 7px;
+  overflow-x: scroll;
+}
+table {
+  text-align: center;
+}
+thead th {
+  border-right: 1px solid rgb(255, 255, 255);
+}
+tbody td {
+  border-right: 2.5px solid black;
+  border-bottom: 0.5px solid black;
+  border-left: 2.5px solid black;
+  padding: 3px;
+}
